@@ -1,0 +1,415 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Cyclomatic Complexity</title>
+<meta name="keywords"
+  content="multi layer, free website templates, XHTML CSS" />
+<meta name="description"
+  content="Multi Layer - free website template provided by templatemo.com" />
+<link href="templatemo_style.css" rel="stylesheet" type="text/css" />
+<link href="css/jquery.ennui.contentslider.css" rel="stylesheet"
+  type="text/css" media="screen,projection" />
+  <style type="text/css">
+  table a:link {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration:none;
+}
+table a:visited {
+  color: #999999;
+  font-weight:bold;
+  text-decoration:none;
+}
+table a:active,
+table a:hover {
+  color: #bd5a35;
+  text-decoration:underline;
+}
+table {
+  font-family:Arial, Helvetica, sans-serif;
+  color:#666;
+  font-size:12px;
+  text-shadow: 1px 1px 0px #fff;
+  background:#eaebec;
+  margin:20px;
+  border:#ccc 1px solid;
+
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:3px;
+
+  -moz-box-shadow: 0 1px 2px #d1d1d1;
+  -webkit-box-shadow: 0 1px 2px #d1d1d1;
+  box-shadow: 0 1px 2px #d1d1d1;
+}
+table th {
+  padding:21px 25px 22px 25px;
+  border-top:1px solid #fafafa;
+  border-bottom:1px solid #e0e0e0;
+
+  background: #ededed;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
+  background: -moz-linear-gradient(top,  #ededed,  #ebebeb);
+}
+table th:first-child{
+  text-align: left;
+  padding-left:20px;
+}
+table tr:first-child th:first-child{
+  -moz-border-radius-topleft:3px;
+  -webkit-border-top-left-radius:3px;
+  border-top-left-radius:3px;
+}
+table tr:first-child th:last-child{
+  -moz-border-radius-topright:3px;
+  -webkit-border-top-right-radius:3px;
+  border-top-right-radius:3px;
+}
+table tr{
+  text-align: center;
+  padding-left:20px;
+}
+table tr td:first-child{
+  text-align: left;
+  padding-left:20px;
+  border-left: 0;
+}
+table tr td {
+  padding:18px;
+  border-top: 1px solid #ffffff;
+  border-bottom:1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
+  
+  background: #fafafa;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
+  background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);
+}
+table tr.even td{
+  background: #f6f6f6;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f6f6f6));
+  background: -moz-linear-gradient(top,  #f8f8f8,  #f6f6f6);
+}
+table tr:last-child td{
+  border-bottom:0;
+}
+table tr:last-child td:first-child{
+  -moz-border-radius-bottomleft:3px;
+  -webkit-border-bottom-left-radius:3px;
+  border-bottom-left-radius:3px;
+}
+table tr:last-child td:last-child{
+  -moz-border-radius-bottomright:3px;
+  -webkit-border-bottom-right-radius:3px;
+  border-bottom-right-radius:3px;
+}
+table tr:hover td{
+  background: #f2f2f2;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
+  background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);  
+}
+  
+  
+  .classname {
+  -moz-box-shadow:inset 0px 1px 0px 0px #97c4fe;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #97c4fe;
+  box-shadow:inset 0px 1px 0px 0px #97c4fe;
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #3d94f6), color-stop(1, #1e62d0) );
+  background:-moz-linear-gradient( center top, #3d94f6 5%, #1e62d0 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#3d94f6', endColorstr='#1e62d0');
+  background-color:#3d94f6;
+  -webkit-border-top-left-radius:20px;
+  -moz-border-radius-topleft:20px;
+  border-top-left-radius:20px;
+  -webkit-border-top-right-radius:20px;
+  -moz-border-radius-topright:20px;
+  border-top-right-radius:20px;
+  -webkit-border-bottom-right-radius:20px;
+  -moz-border-radius-bottomright:20px;
+  border-bottom-right-radius:20px;
+  -webkit-border-bottom-left-radius:20px;
+  -moz-border-radius-bottomleft:20px;
+  border-bottom-left-radius:20px;
+  text-indent:0;
+  border:1px solid #337fed;
+  display:inline-block;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:15px;
+  font-weight:bold;
+  font-style:normal;
+  height:41px;
+  line-height:41px;
+  width:151px;
+  text-decoration:none;
+  text-align:center;
+  text-shadow:1px 1px 0px #1570cd;
+}
+.classname:hover {
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #1e62d0), color-stop(1, #3d94f6) );
+  background:-moz-linear-gradient( center top, #1e62d0 5%, #3d94f6 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e62d0', endColorstr='#3d94f6');
+  background-color:#1e62d0;
+}.classname:active {
+  position:relative;
+  top:1px;
+  </style>
+  
+  <script type="text/javascript">
+  
+  function formSubmit()
+{
+
+  var loc = document.getElementById("folderLoc").value;
+  var rel = document.getElementById("rlsName").value;
+  var mod = document.getElementById("modName").value;
+  
+  if(loc == "") {
+  alert("Please enter project root directory location!");
+  return false;
+  }
+  
+  if(rel == "") {
+  alert("Please enter Release name!");
+  return false;
+  }
+  
+  if(rel == "") {
+  alert("Please enter Module name!");
+  return false;
+  }
+  
+document.getElementById("ccForm").submit();
+}
+  </script>
+</head>
+<body>
+  <div id="templatemo_header_wrapper">
+
+    <div id="templatemo_header">
+
+
+      <div id="site_title">
+        <div align="right"><img src="images/cyclomatic complexity.png"  width="50" height="50" align="absmiddle" />
+          <FONT COLOR=BLACK SIZE=5 FACE="ARIAL BLACK"><strong>Cyclomatic
+              Complexity Generator</strong></FONT> <FONT COLOR=BLACK SIZE=3
+            FACE="ARIAL BLACK"></FONT><BR />
+        </div>
+        <!--<span>free website templates</span> -->
+      </div>
+
+      <!--
+        <div id="search_box">
+            <form action="#" method="get">
+                <input type="text" value="" name="q" size="10" id="searchfield" title="searchfield" onfocus="clearText(this)" onblur="clearText(this)" />
+                <input type="submit" name="Search" value="Search" alt="Search" id="searchbutton" title="Search" />
+            </form>
+        </div>
+        -->
+      <div class="cleaner"></div>
+    </div>
+    <!-- end of header -->
+
+    <div id="templatemo_menu">
+      <ul>
+        <li><a href="index.html" class="current"><font size="3">Home</font></a></li>
+        <li><a href="ToolInfo.html"><font size="3">Tool Guide</font></a></li>
+
+
+
+
+       
+      </ul>
+    </div>
+    <!-- end of templatemo_menu -->
+
+    <div id="templatemo_banner">
+
+      <div id="one" class="contentslider">
+        <div class="cs_wrapper">
+          <div class="cs_slider">
+
+            <div class="cs_article">
+
+              <div class="left">
+                <h2>
+                  <strong>We are Programmers!!</strong>
+                </h2>
+                <p>Less Documentation & More Automation is what we do..</p>
+                <!-- <div class="button"><a href="#">Read more</a></div> -->
+              </div>
+              <div class="right">
+
+                <img src="images/programmer.jpg"
+                  alt="Template 1" height="166" />
+
+
+              </div>
+
+            </div>
+            <!-- End cs_article -->
+            <!-- End cs_article -->
+
+            <div class="cs_article">
+              <div class="right">
+                <h2>Documentation, Erghh!!</h2>
+                <p>When Documentation becomes boring!.</p>
+
+                <!-- <div class="button"><a href="#">Read more</a></div> -->
+              </div>
+              <div class="left">
+                <a href="http://www.templatemo.com/page/3"
+                  target="_parent"><img
+                  src="images/documentation.jpg"
+                  alt="Template 3" /></a>
+              </div>
+            </div>
+            <!-- End cs_article -->
+
+            <div class="cs_article">
+              <div class="right">
+                <h2>Automation</h2>
+                <p>We introduce Automation!</p>
+
+                <!-- <div class="button"><a href="#">Read more</a></div> -->
+              </div>
+              <div class="left">
+                <a href="http://www.templatemo.com/page/4"
+                  target="_parent"><img
+                  src="images/Connectwise-Dev-SQsm.jpg"
+                  alt="Template 4" /></a>
+              </div>
+            </div>
+            <!-- End cs_article -->
+
+          </div>
+          <!-- End cs_slider -->
+        </div>
+        <!-- End cs_wrapper -->
+      </div>
+      <!-- End contentslider -->
+
+      <!-- Site JavaScript -->
+      <script type="text/javascript" src="js/jquery-1.3.1.min.js"></script>
+      <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+      <script type="text/javascript"
+        src="js/jquery.ennui.contentslider.js"></script>
+      <script type="text/javascript">
+              $(function() {
+                $('#one').ContentSlider({
+                  width : '920px',
+                  height : '200px',
+                  speed : 800,
+                  easing : 'easeInOutBack'
+                });
+              });
+            </script>
+      <script src="js/jquery.chili-2.2.js" type="text/javascript"></script>
+      <script src="js/chili/recipes.js" type="text/javascript"></script>
+      <div class="cleaner"></div>
+
+    </div>
+
+  </div>
+  <!-- end of header_wrapper -->
+
+  <div id="templatemo_content_wrapper_outer">
+    <div id="templatemo_content_wrapper_inner">
+      <div id="templatemo_content_wrapper">
+
+        <div id="templatemo_content">
+
+          <h4>Automate Cyclomatic Complexity Here <img src="images/Red-Down-Arrow.jpg"  width="50" height="50" align="middle" /></h4>
+
+          <form name="ccProjectForm" id="ccForm" action="CyclomaticComplexityExcelDoc" method="post">
+        <table cellspacing='0'> <!-- cellspacing='0' is important, must stay -->
+  
+    
+
+  <tr>
+  <td>Select Project Type : </td>
+  <td>
+  
+  <select name = "projectType" >
+  <option value="java" selected="selected">JAVA</option>
+  <option value="vb">VB .NET</option>
+  <option value="cs">C# .NET</option>
+  <option value="c">C</option>
+  <option value="plsql">PL/SQL</option>
+  </select> 
+  </tr>
+  <tr><td>Give Project Root Directory : </td>
+        <td><input type="text" id="folderLoc" name="folderLoc" maxlength="500" size="30"></td></tr>
+  <tr class='even'><td>Release Name :</td>
+        <td><input type="text" id="rlsName" name="rlsName" size="30"></td></tr><!-- Table Row -->
+  <tr ><td>Module Name : </td>
+        <td><input type="text" id="modName" name="modName" size="30"></td></tr><!-- Darker Table Row -->
+
+  
+  <tr class='even' ><td colspan="2" align="center"><a href="#" class="classname" onclick="formSubmit()"><font color="#ffffff">Generate CC</font></a></td></tr>
+  
+    
+</table>
+</form>
+
+          <div class="cleaner_h40"></div>
+         
+
+
+
+        </div>
+        <!-- end of templatemo_content -->
+
+        <div id="templatemo_sidebar">
+
+          <div id="news_section">
+
+           
+
+            
+
+            
+
+            
+
+            <div class="cleaner"></div>
+
+          </div>
+
+          <div class="section_rss_twitter">
+
+
+
+            <div class="margin_bottom_20">
+             
+            </div>
+
+
+
+          </div>
+
+          <div class="cleaner"></div>
+        </div>
+        <!-- end of sidebar -->
+
+        <div class="cleaner"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="templatemo_footer_wrapper">
+    <div id="templatemo_footer">
+
+      
+      Copyright © 2013 KOHLS | Abhijit Karanjkar
+
+
+    </div>
+    <!-- end of footer -->
+
+  </div>
+  <!-- end of footer_wrapper -->
+
+</body>
+</html>
